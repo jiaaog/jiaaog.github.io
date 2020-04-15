@@ -37,6 +37,12 @@ footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
+img {
+    max-width:1000px;
+    max-height:1500px;
+    width:auto;
+    height:auto;
+}
 hr { 
   display: block;
   margin-top: 0.5em;
