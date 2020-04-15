@@ -20,15 +20,15 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3em;
-    font-family:Tahoma, Geneva, sans-serif;
-}
-h2 {
     font-size: 2em;
     font-family:Tahoma, Geneva, sans-serif;
 }
-p {
+h2 {
     font-size: 1.5em;
+    font-family:Tahoma, Geneva, sans-serif;
+}
+p {
+    font-size: 1em;
     font-family:Tahoma, Geneva, sans-serif;
     line-height: 1.4em;
     color: #033;
