@@ -5,6 +5,7 @@ body {
 nav ul, footer ul {
     font-family:Tahoma, Geneva, sans-serif;
     padding: 0px;
+    font-size: 1.2em;
     list-style: none;
     font-weight: bold;
 }
@@ -71,13 +72,13 @@ ul.posts li {
   font-family:Tahoma, Geneva, sans-serif;
   color: #3a3535;
   cursor: pointer;
-  padding: 16px;
+  padding: 5%;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
   font-size: 1.5em;
-  transition: 0.4s;
+  transition: 0.6s;
 }
 
 .active, .accordion:hover {
@@ -89,7 +90,7 @@ ul.posts li {
   color: #d8d5d5;
   font-weight: bold;
   float: right;
-  margin-left: 5px;
+  margin-left: auto;
 }
 
 .active:after {
@@ -97,7 +98,7 @@ ul.posts li {
 }
 
 .panel {
-  padding: 0 18px;
+  padding: inherit;
   background-color: white;
   max-height: 0;
   overflow: hidden;
