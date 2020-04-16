@@ -3,7 +3,8 @@ layout: default
 title: GIS/RS Work
 ---
 <div class="gis">
-  <h2>GIS Works</h2>
+   <button class="accordion">GIS Works</button>
+   <div class="panel">
         <p>
         Calgary 3D population Density by Dissemination Block (2016) 
         </p>
@@ -14,10 +15,31 @@ title: GIS/RS Work
         </p>
         <img src="https://user-images.githubusercontent.com/41793727/79388369-6f3f6100-7f2a-11ea-9e6f-3237f902206e.jpg" alt="Hot/Cold Spots" width="800" height="870">
         <hr>  
-  <h2>Remote Sensing Works</h2>
+   </div> 
+  
+   <button class="accordion">Remote Sensing Works</button>
+   <div class="panel">
         <p> Landsat False Colour - Panjin, Liaoning 1993 Sept 21st </p>
         <img src="https://user-images.githubusercontent.com/41793727/79029363-4e08fa00-7b51-11ea-9dc9-0818128192b3.jpg" alt="Landsat 1993" width="800" height="450">
         <hr>        
         <p> Normalized difference vegetation index (NDVI) yearly change of Canada, MODIS product 2018 Jan 1st -2019 Jan 1st (Home page figure)</p> 
         <img src="https://user-images.githubusercontent.com/41793727/79370037-3776f000-7f0f-11ea-9d72-38497e445276.gif" alt="NDVI" width="800" height="513">
+    </div> 
 </div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
