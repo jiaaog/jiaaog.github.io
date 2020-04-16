@@ -72,7 +72,7 @@ ul.posts li {
   font-family:Tahoma, Geneva, sans-serif;
   color: #3a3535;
   cursor: pointer;
-  padding: 5%;
+  padding: inherit;
   width: 100%;
   border: none;
   text-align: left;
