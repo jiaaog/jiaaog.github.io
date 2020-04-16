@@ -92,9 +92,9 @@ ul.posts li {
 
 .accordion {
   background-color: #eee;
-  color: #444;
+  color: #e3e1e1;
   cursor: pointer;
-  padding: 18px;
+  padding: 16px;
   width: 100%;
   border: none;
   text-align: left;
@@ -109,7 +109,7 @@ ul.posts li {
 
 .accordion:after {
   content: '\002B';
-  color: #777;
+  color: #d8d5d5;
   font-weight: bold;
   float: right;
   margin-left: 5px;
