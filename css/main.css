@@ -39,7 +39,7 @@ footer {
 }
 img {
     max-width:1000px;
-    max-height:1500px;
+    max-height:auto;
     width:auto;
     height:auto;
 }
