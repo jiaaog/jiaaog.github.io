@@ -3,14 +3,79 @@ layout: default
 title: About Jiaao
 ---
 		<div class="about">
-			<h1>About</h1>
-			<p style="margin-left: 10%; margin-right: 10%;">
-                        Jiaao is a GIS research associate at University of Calgary. He is also a bad photographer and amateur guitar player.<br>
-			<br>
-                        His research is an interdisciplinary mix of urban geography, demography, land suitability planning, network analysis, and energy system transition, with considerable expertise in geographic information science, remote sensing, Python-based programming, multi-criteria decision analysis (MCDA), web-mapping, and 3D cartographic visualizations. With a background of environmental science, he have firm fundamental knowledge of environmental remediation, ecosystem health, and environmental policies. Through his education and experiences, he has been trying to bridge all those interdisciplinary knowledges together and exploring solutions of the problem from a spatial perspective. Jiaao believes that GIScience is a whole universe illustrating the interactions bewteen human-beings and their surrouding environments. Hopefully, his works can be used to make the world a better place. 
-                        </p>
+		<h1>About</h1>
+		<p style="margin-left: 10%; margin-right: 10%;">
+		Jiaao is a GIS research associate at University of Calgary. He is also a bad photographer and amateur guitar player.<br>
+		<br>
+		His research is an interdisciplinary mix of urban geography, demography, land suitability planning, network analysis, and energy system transition, with considerable expertise in geographic information science, remote sensing, Python-based programming, multi-criteria decision analysis (MCDA), web-mapping, and 3D cartographic visualizations. With a background of environmental science, he have firm fundamental knowledge of environmental remediation, ecosystem health, and environmental policies. Through his education and experiences, he has been trying to bridge all those interdisciplinary knowledges together and exploring solutions of the problem from a spatial perspective. Jiaao believes that GIScience is a whole universe illustrating the interactions bewteen human-beings and their surrouding environments. Hopefully, his works can be used to make the world a better place. 
+		</p>
 
-			<ul class="contacts">
-				<li><a href="http://www.linkedin.com/in/jiaao-guo-5464b8b7"> See Jiaao's Linkedin</a></li>
-				</ul>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+		crossorigin=""/>
+		<!-- Make sure you put this AFTER Leaflet's CSS -->
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+		crossorigin=""></script>
+
+		<table>
+			<tr>
+			  <th>Favourate Locations</th>
+			  <th>City</th>
+			  <th>Coordinates</th>
+			</tr>
+			<tr class = "tablerow" onclick=testfunction1()>
+			  <td>My Hometown</td>
+			  <td>Zhengzhou, China</td>
+			  <td>34.772127, 113.726860</td>
+			</tr>
+			<tr class = "tablerow" onclick=testfunction2()>
+			  <td>Current Place</td>
+			  <td>Calgary, Canada</td>
+			  <td>51.051134, -114.069352</td>
+			</tr>
+			<tr class = "tablerow" onclick=testfunction3()>
+			  <td>The Bucket List</td>
+			  <td>Victoria Falls, Zimbabwe</td>
+			  <td>-17.930202, 25.848976</td>
+			</tr>
+
+		</table>
+		<div id="mapid" style="width: 80%; height:580px"></div>
+
+		<ul class="contacts">
+			<li><a href="http://www.linkedin.com/in/jiaao-guo-5464b8b7"> See Jiaao's Linkedin</a></li>
+			</ul>
 		</div>
+	<script>
+	    var mymap = L.map('mapid').setView([51.047, -114.07], 3);
+	    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		maxZoom: 18,
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1,
+		accessToken: 'sk.eyJ1IjoiamlhYW9nIiwiYSI6ImNrYTY4YzV6cjA1aHgycW13b21rd282bXQifQ.mFgri2YbIfCL4NdKO1476A'
+	    }).addTo(mymap);
+
+	    var layerGroup = L.layerGroup().addTo(mymap);
+
+	    function testfunction1(){
+	      layerGroup.clearLayers();
+	      mymap.closePopup();
+	      marker = L.marker([34.772127, 113.726860]).addTo(layerGroup);
+	      marker.bindPopup("Hometown").openPopup();
+	    }
+	    function testfunction2(){
+	      layerGroup.clearLayers();
+	      mymap.closePopup();
+	      marker = L.marker([51.051134, -114.069352]).addTo(layerGroup);
+	      marker.bindPopup("Current Location").openPopup();
+	    }
+	    function testfunction3(){
+	      layerGroup.clearLayers();
+	      mymap.closePopup();
+	      marker = L.marker([-17.930202, 25.848976]).addTo(layerGroup);
+	      marker.bindPopup("Bucket List #1").openPopup();
+	    }
+	</script>
