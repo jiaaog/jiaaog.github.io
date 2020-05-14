@@ -137,10 +137,11 @@ ul.posts li {
 table {
   font-family: Tahoma, Geneva, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-table td, #customers th {
+table td, table th {
   border: 1px solid #ddd;
   padding: 8px;
 }
