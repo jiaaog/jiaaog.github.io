@@ -137,8 +137,7 @@ ul.posts li {
 table {
   font-family: Tahoma, Geneva, sans-serif;
   border-collapse: collapse;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0 auto; 
 }
 
 table td, table th {
