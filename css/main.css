@@ -256,3 +256,31 @@ footer {
     bottom: 15px;
   }
 }
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 0;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+  }
+
+  .nav-links.show {
+    display: flex;
+    padding: 10px 0;
+    max-height: 500px; /* big enough to fit all links */
+  }
+}
+.menu-toggle {
+  touch-action: manipulation;
+}
+nav ul li a {
+  padding: 12px 0;
+  display: block;
+}
