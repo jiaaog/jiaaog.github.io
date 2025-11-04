@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 	<html>
 		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 		</head>
 		<body>
-			<nav>
-			<ul>
-	        		<li><a href="/">Home</a></li>
-	        		<li><a href="/cv">CV</a></li>
-				<li><a href="/gis">GIS/RS Works</a></li>
-				<li><a href="/photography">Photography</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-				<li><a href="/about">About</a></li>
-	    		</ul>
+			  <nav>
+			  <div class="nav-container">
+			    <div class="brand"><a href="/">Jiaao Gu</a></div>
+			
+			    <button class="menu-toggle" aria-label="Toggle navigation">
+			      ☰
+			    </button>
+			
+			    <ul class="nav-links">
+			      <li><a href="/">Home</a></li>
+			      <li><a href="/cv">CV</a></li>
+			      <li><a href="/gis">GIS/RS Works</a></li>
+			      <li><a href="/photography">Photography</a></li>
+			      <li><a href="/about">About</a></li>
+			    </ul>
+			  </div>
 			</nav>
+
 			<div class="container">
 			
 			{{ content }}
@@ -26,5 +35,14 @@
 	        		<li><a href="mailto:jiaaog@outlook.com">email</a></li>
 				</ul>
 			</footer>
+			<script>
+			  const menuToggle = document.querySelector('.menu-toggle');
+			  const navLinks = document.querySelector('.nav-links');
+			
+			  menuToggle.addEventListener('click', () => {
+			    navLinks.classList.toggle('show');
+			  });
+			</script>
+
 		</body>
 	</html>
